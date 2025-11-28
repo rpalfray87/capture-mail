@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --primary-background : rgb(18,18,21);
+    --primary-color : rgb(252,192,40);
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+p {
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1em;
+    text-align: left;
+    max-width: 800px;
+}
+
+a {
+    text-decoration: none;
+}
+
+b {
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 0px 16px;
+}
+
+header {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+header img {
+    width: 35px;
+}
+
+.comingsoon {
+    text-align: center;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 4em;
+    color: white;
+    padding: 16px 32px;
+    border: 4px white dashed;
+    border-radius: 10px;
+    margin: 16px auto;
+    margin-top: 115px;
+}
+
+.newsletter {
+    background-color: white;
+    padding: 16px 16px;
+    border-radius: 8px;
+    color : black;
+    font-weight: 500;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap : 16px;
+}
+
+@media screen and (max-width : 900px) {
+    .comingsoon {
+        padding: 16px;
+    }
+    
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 8px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.social img {
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+@media screen and (max-width : 800px) {
+    .social-container {
+        gap : 24px;
+    }
+    .comingsoon {
+        font-size: 2em;
+    }
+    p.newsletter {
+        font-size: 1rem;
+    }
+    .social img {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .social img {
+        width: 40px;
+    }
+    .comingsoon {
+        font-size: 2em;
+    }
+    p.newsletter {
+        font-size: 1rem;
+    }
+    .social h2 {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+            header {
+                position: absolute;
+                top : 0;
+            }
+            body {
+                gap : 16px;
+            }
+            h2 {
+                margin : 2rem auto;
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+            h2, p {
+                color : white;
+                text-align: center;
+                font-family: 'Outfit', sans-serif;
+                color: white;
+                padding : 1rem;
+            }
+            b {
+                color :  var(--primary-color);
+            }
+            @media screen and (max-width: 600px){
+                h2 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            @media screen and (max-width: 280px){
+                header {
+                    padding : 8px 0;
+                }
+                header h1 {
+                    font-size: 1rem;
+                }
+                header img {
+                    width: 32px;
+                }
+            }
+        </style>
+        <link rel="shortcut icon" type="image/png" href="./Logo.png" />
+        <title>front-end.fr</title>
+    </head>
+    <body>
+        <header>
+            <img src="./Logo.png" alt="Logo front-end" />
+            <h1>front-end.fr</h1>
+        </header>
+        <h2>Merci d'avoir rejoint notre communauté de passionné ! </h2>
+        <p>Il reste juste une étape pour <b>confirmer ton inscription</b>, un lien a été envoyé dans ta boîte mail.</p>
+        <p>Cela permet à toi et à moi d'être sûrs que les emails que je t'enverrai ne finiront pas tristement dans tes spams !</p>
+        <p>Je tiens à rappeler aussi que tu peux te désinscrire à tout moment, un lien sera présent dans chaque email que je t'envoie.</p> 
+    </body>
+</html>
