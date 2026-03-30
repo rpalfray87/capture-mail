@@ -102,6 +102,7 @@ main {
     border-radius: 16px;
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
 }
 
 .formation-card:hover {
@@ -133,8 +134,9 @@ main {
     padding: 32px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     gap: 12px;
+    flex: 1;
 }
 
 .formation-info h3 {
@@ -147,6 +149,14 @@ main {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.75);
     line-height: 1.6;
+}
+
+.formation-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: auto;
 }
 
 .formation-prix {
@@ -181,6 +191,7 @@ main {
     transition: opacity 0.2s ease, transform 0.2s ease;
     margin-top: 4px;
 }
+
 
 .btn-udemy:hover {
     opacity: 0.85;
