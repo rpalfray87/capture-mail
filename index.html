@@ -6,32 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/png" href="./Logo.png" />
-    <title>front-end.fr</title>
+    <title>front-end.fr — Formations</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <img src="./Logo.png" alt="Logo front-end" />
-        <h1>front-end.fr</h1>
-      </header>
-      <p class="comingsoon">COMING SOON !</p>
-      <div class="news">
-        <p class="newsletter">
-            En attendant tu peux t'abonner à ma <b>Newsletter</b> pour être tenu au
-            courant des nouveautés à venir et ne rien manquer des actualités majeurs
-            sur le développement front-end et l'UI / UX
-          </p>
-          <script
-            id="form-script-tag-12232690"
-            src="https://www.formation.front-end.fr/public/remote/page/188717805d4374124de71b040c83adc1a8bbb46a.js"
-          ></script>
-          <style>
-            iframe {
-              width: 100%;
-              height: 310px;
-            }
-          </style>
-      </div>
+    <header>
+      <img src="./Logo.png" alt="Logo front-end" />
+      <h1>front-end.fr</h1>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <h2 class="hero-title">Apprends le <span class="highlight">front-end</span> avec des formations complètes</h2>
+        <p class="hero-subtitle">Des cours concrets et pratiques disponibles sur Udemy pour progresser à ton rythme.</p>
+      </section>
+
+      <!-- Formations -->
+      <section class="formations">
+        <div class="formation-card">
+          <div class="formation-img-placeholder">
+            <img src="https://img-c.udemycdn.com/course/750x422/4860984_6292_2.jpg" alt="FIGMA : Le Cours Complet pour Designer UI / UX 2026">
+          </div>
+          <div class="formation-info">
+            <h3>FIGMA : Le Cours Complet pour Designer UI / UX 2026</h3>
+            <p class="formation-desc">Cours complet visant à vous faire maîtriser Figma, le logiciel le plus utilisé en web design et Design UI / UX</p>
+            <div class="formation-prix">
+              <!-- <span class="prix-barre">14,99€</span> -->
+              <span class="prix-actuel">14,99€</span>
+            </div>
+            <a href="https://www.udemy.com/course/figma-cours-complet/" class="btn-udemy">J'achète cette formation</a>
+          </div>
+        </div>
+
+        <div class="formation-card">
+          <div class="formation-img-placeholder">
+            <img src="./assets/contents/Thumbnail cours figma autolayout.jpg" alt="Figma Masterclass : Créez une Landing Page 100% Responsive">
+          </div>
+          <div class="formation-info">
+            <h3>Figma Masterclass : Créez une Landing Page 100% Responsive</h3>
+            <p class="formation-desc">Apprenez à concevoir des sites responsives et professionnelles avec Figma et les AutoLayouts</p>
+            <div class="formation-prix">
+              <!-- <span class="prix-barre">14,99€</span> -->
+              <span class="prix-actuel">12,99€</span>
+            </div>
+            <a href="https://www.udemy.com/course/figma-masterclass-autolayout-creez-une-landing-page-100-responsive/" class="btn-udemy">J'achète cette formation</a>
+          </div>
+        </div>
+
+        <div class="formation-card">
+          <div class="formation-img-placeholder">
+            <img src="./assets/contents/Notion.jpg" alt="Notion : la formation complète pour booster sa productivité">
+          </div>
+          <div class="formation-info">
+            <h3>Notion : la formation complète pour booster sa productivité</h3>
+            <p class="formation-desc">Apprenez à utiliser Notion pour organiser votre travail et améliorer votre productivité.</p>
+            <div class="formation-prix">
+              <!--<span class="prix-barre">14,99€</span>-->
+              <span class="prix-actuel">12,99€</span>
+            </div>
+            <a href="https://www.udemy.com/course/notion-la-formation-complete-pour-booster-sa-productivite/" class="btn-udemy">J'achète cette formation</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Réseaux sociaux -->
       <section class="social-container">
         <a href="https://www.tiktok.com/@frontend.fr">
           <div class="social">
@@ -39,19 +77,69 @@
             <h2>TikTok</h2>
           </div>
         </a>
-        <a href="https://www.youtube.com/@tutos-front-end"
-          ><div class="social">
+        <a href="https://www.youtube.com/@tutos-front-end">
+          <div class="social">
             <img src="./assets/images/youtube.png" alt="Youtube" />
             <h2>Youtube</h2>
           </div>
         </a>
-        <a href="https://www.instagram.com/front_end.fr/"
-          ><div class="social">
+        <a href="https://www.instagram.com/front_end.fr/">
+          <div class="social">
             <img src="./assets/images/insta.png" alt="Instagram" />
             <h2>Instagram</h2>
           </div>
         </a>
       </section>
+    </main>
+
+    <!-- Modale Newsletter -->
+    <div class="newsletter-modal open" id="newsletterModal">
+      <button class="modal-toggle" id="modalToggle" aria-label="Ouvrir la newsletter">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <span class="modal-toggle-text">Newsletter</span>
+      </button>
+      <div class="modal-content" id="modalContent">
+        <button class="modal-close" id="modalClose" aria-label="Fermer">&times;</button>
+        <p class="modal-title">Reste informé !</p>
+        <p class="modal-desc">
+          Abonne-toi à la <b>newsletter</b> pour ne rien manquer des nouveautés sur le développement front-end et l'UI / UX.
+        </p>
+        <div class="modal-form">
+          <script
+            id="form-script-tag-12232690"
+            src="https://www.formation.front-end.fr/public/remote/page/188717805d4374124de71b040c83adc1a8bbb46a.js"
+          ></script>
+          <style>
+            .modal-form iframe {
+              width: 100%;
+            }
+          </style>
+        </div>
+      </div>
     </div>
+
+    <script>
+      const modal = document.getElementById('newsletterModal');
+      const toggle = document.getElementById('modalToggle');
+      const close = document.getElementById('modalClose');
+      const content = document.getElementById('modalContent');
+
+      toggle.addEventListener('click', () => {
+        modal.classList.add('open');
+      });
+
+      close.addEventListener('click', () => {
+        modal.classList.remove('open');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (modal.classList.contains('open') && !modal.contains(e.target)) {
+          modal.classList.remove('open');
+        }
+      });
+    </script>
   </body>
 </html>

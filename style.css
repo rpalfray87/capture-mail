@@ -2,50 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-    --primary-background : rgb(18,18,21);
-    --primary-color : rgb(252,192,40);
+    --primary-background: rgb(18, 18, 21);
+    --primary-color: rgb(252, 192, 40);
+    --card-bg: rgb(28, 28, 34);
+    --card-border: rgb(42, 42, 50);/* #1c1c22; */
 }
 
 *, ::before, ::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--primary-background);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-}
-
-p {
-    color: white;
     font-family: 'Outfit', sans-serif;
-    font-size: 1em;
-    text-align: left;
-    max-width: 800px;
+    color: white;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
-b {
-    font-weight: 700;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    padding: 0px 16px;
-}
-
+/* ===== HEADER ===== */
 header {
     display: flex;
     gap: 16px;
@@ -55,55 +36,164 @@ header {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     background-color: var(--primary-color);
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0
+    left: 0;
+    z-index: 100;
 }
 
 header img {
     width: 35px;
 }
 
-.comingsoon {
-    text-align: center;
-    font-family: 'Paytone One', sans-serif;
-    font-size: 4em;
-    color: white;
-    padding: 16px 32px;
-    border: 4px white dashed;
-    border-radius: 10px;
-    margin: 16px auto;
-    margin-top: 115px;
+header h1 {
+    font-size: 1.4rem;
 }
 
-.newsletter {
-    background-color: white;
-    padding: 16px 16px;
-    border-radius: 8px;
-    color : black;
-    font-weight: 500;
-}
-
-.news {
+/* ===== MAIN ===== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    padding-top: 100px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
-    gap : 16px;
+    gap: 64px;
 }
 
-@media screen and (max-width : 900px) {
-    .comingsoon {
-        padding: 16px;
-    }
-    
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 0;
 }
 
+.hero-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+}
+
+/* ===== FORMATIONS ===== */
+.formations {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.formation-card {
+    display: flex;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(252, 192, 40, 0.1);
+}
+
+.formation-img-placeholder {
+    width: 300px;
+    min-width: 300px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgb(40, 40, 50), rgb(55, 55, 65));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+    overflow: hidden;
+}
+
+.formation-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.formation-info {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.formation-info h3 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.formation-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+}
+
+.formation-prix {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.prix-barre {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: line-through;
+    font-weight: 400;
+}
+
+.prix-actuel {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.btn-udemy {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: var(--primary-color);
+    color: var(--primary-background);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 10px 24px;
+    border-radius: 8px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    margin-top: 4px;
+}
+
+.btn-udemy:hover {
+    opacity: 0.85;
+    transform: scale(1.03);
+}
+
+/* ===== SOCIAL ===== */
 .social-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap : 64px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 64px;
+    padding-top: 16px;
 }
 
 .social {
@@ -113,40 +203,188 @@ header img {
     color: white;
     gap: 8px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    transition: transform 0.2s ease;
+}
+
+.social:hover {
+    transform: scale(1.08);
 }
 
 .social img {
-    width: 100px;
+    width: 80px;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
 
-@media screen and (max-width : 800px) {
-    .social-container {
-        gap : 24px;
+.social h2 {
+    font-size: 1rem;
+}
+
+/* ===== NEWSLETTER MODAL ===== */
+.newsletter-modal {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 200;
+}
+
+.modal-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: var(--primary-background);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(252, 192, 40, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 28px rgba(252, 192, 40, 0.5);
+}
+
+.newsletter-modal.open .modal-toggle {
+    display: none;
+}
+
+.modal-content {
+    display: none;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px;
+    width: 360px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.newsletter-modal.open .modal-content {
+    display: block;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    .comingsoon {
-        font-size: 2em;
-    }
-    p.newsletter {
-        font-size: 1rem;
-    }
-    .social img {
-        width: 50px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@media screen and (max-width : 400px) {
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: white;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.modal-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.modal-desc b {
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 800px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .formation-card {
+        flex-direction: column;
+    }
+
+    .formation-img-placeholder {
+        min-width: 100%;
+        min-height: 180px;
+    }
+
+    .formation-info {
+        padding: 24px;
+    }
+
+    .social-container {
+        gap: 24px;
+    }
+
+    .social img {
+        width: 50px;
+    }
+
+    .modal-content {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        gap: 40px;
+        padding-top: 90px;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .formation-info h3 {
+        font-size: 1.2rem;
+    }
+
     .social img {
         width: 40px;
     }
-    .comingsoon {
-        font-size: 2em;
-    }
-    p.newsletter {
-        font-size: 1rem;
-    }
+
     .social h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .newsletter-modal {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .modal-content {
+        width: calc(100vw - 32px);
     }
 }
